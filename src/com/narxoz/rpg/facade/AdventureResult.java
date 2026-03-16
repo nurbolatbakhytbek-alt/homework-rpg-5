@@ -1,44 +1,14 @@
 package com.narxoz.rpg.facade;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 public class AdventureResult {
-    private String winner;
-    private int rounds;
-    private String reward;
-    private final List<String> log = new ArrayList<>();
 
-    public String getWinner() {
-        return winner;
+    private boolean success;
+
+    public AdventureResult(boolean success) {
+        this.success = success;
     }
 
-    public void setWinner(String winner) {
-        this.winner = winner;
-    }
-
-    public int getRounds() {
-        return rounds;
-    }
-
-    public void setRounds(int rounds) {
-        this.rounds = rounds;
-    }
-
-    public String getReward() {
-        return reward;
-    }
-
-    public void setReward(String reward) {
-        this.reward = reward;
-    }
-
-    public void addLine(String line) {
-        log.add(line);
-    }
-
-    public List<String> getLog() {
-        return Collections.unmodifiableList(log);
+    public boolean isSuccess() {
+        return success;
     }
 }
